@@ -9,10 +9,11 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
-    // MARK: -Initialisation des vues
+    // MARK: - Initialisation des vues
     let textFieldCity : SimpleTextField = SimpleTextField(frame: .zero, placeholder: "Rechercher une ville")
     
     let buttonSearch : SearchButton = SearchButton(frame: .zero, title: "RECHERCHER")
+    
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -36,29 +37,59 @@ class WeatherViewController: UIViewController {
         
     }
     
+    
     //MARK: - Desactiver le clavier
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
     
-    //MARK: - Bouton recherché clické
+    //MARK: - Click du Bouton recherche
     @objc func clickButton(sender: UIButton) {
-        print("Yeah Click")
-        self.performSegue(withIdentifier: "detailWeather", sender: Weathers)
+        // On vérifie que le textfield est bien rempli
+        if textFieldCity.text == "" {
+            let alert = UIAlertController(title: "Erreur", message: "Vous devez saisir une ville!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        // On désactive l'utilisation du bouton pour eviter les spams
+        buttonSearch.isUserInteractionEnabled = false
+        
+        // On va chercher les datas
+        ModelWeather.fetchWheathers(city: textFieldCity.text!, days: 4) { (Weathers, error) in
+            // On reactive le bouton
+            self.buttonSearch.isUserInteractionEnabled = true
+            
+            // Si il y a une erreur on l'affiche
+            if let error = error {
+                // On affiche l'alert
+                let alert = UIAlertController(title: "Problème lors de la récupération des données", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                return
+            }
+            
+            // Sinon on ouvre le nouveau controller
+            self.performSegue(withIdentifier: "detailWeather", sender: Weathers)
+        }
     }
+    
     
     // MARK: - Changement du controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailWeather" {
             let controller = segue.destination as! WeatherDetailViewController
-            controller.title = "Météo \(textFieldCity.text!)"
+            controller.title = "Météo / \(textFieldCity.text!)"
+            controller.weather = (sender as! ModelWeather)
             let backItem = UIBarButtonItem()
             backItem.title = ""
             backItem.tintColor = UIColor.white
             navigationItem.backBarButtonItem = backItem
         }
     }
+    
     
     // MARK: - Ajout des contraintes
     override func viewDidLayoutSubviews() {
