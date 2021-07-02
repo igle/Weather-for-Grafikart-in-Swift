@@ -17,6 +17,7 @@ class WeatherDetailViewController: UIViewController {
     lazy var tableView : UITableView = {
         let tv : UITableView = UITableView(frame: .zero)
         tv.register(SimpleWeatherTableViewCell.self, forCellReuseIdentifier: SimpleWeatherTableViewCell.reuseIdentifier)
+        tv.register(MaxWeatherTableViewCell.self, forCellReuseIdentifier: MaxWeatherTableViewCell.reuseIdentifier)
         tv.dataSource = self
         tv.delegate = self
         tv.estimatedRowHeight = UITableView.automaticDimension
@@ -65,9 +66,16 @@ extension WeatherDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleWeatherTableViewCell.reuseIdentifier, for: indexPath) as! SimpleWeatherTableViewCell
-        cell.weatherList = weather.list[indexPath.row]
-        return cell
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: MaxWeatherTableViewCell.reuseIdentifier, for: indexPath) as! MaxWeatherTableViewCell
+            cell.weatherList = weather.list[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SimpleWeatherTableViewCell.reuseIdentifier, for: indexPath) as! SimpleWeatherTableViewCell
+            cell.weatherList = weather.list[indexPath.row]
+            return cell
+        }
     }
 
     
