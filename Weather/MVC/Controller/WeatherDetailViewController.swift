@@ -51,9 +51,7 @@ class WeatherDetailViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             
         ])
-        
     }
-    
 }
 
 
