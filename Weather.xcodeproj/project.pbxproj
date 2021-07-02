@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843EC9C9268A06DC0038F346 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC9C8268A06DC0038F346 /* Double.swift */; };
 		8448B65F2688FD43005FD03D /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448B65E2688FD43005FD03D /* SearchButton.swift */; };
 		8448B6652688FE35005FD03D /* SimpleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448B6642688FE35005FD03D /* SimpleTextField.swift */; };
 		847134E92688F6DC00EF3506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847134E82688F6DC00EF3506 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843EC9C8268A06DC0038F346 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		8448B65E2688FD43005FD03D /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		8448B6642688FE35005FD03D /* SimpleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextField.swift; sourceTree = "<group>"; };
 		847134E52688F6DC00EF3506 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 			children = (
 				84D697FF2688F970005EC844 /* UIColor.swift */,
 				84A9E7DA2689250700F78A00 /* String.swift */,
+				843EC9C8268A06DC0038F346 /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				847134E92688F6DC00EF3506 /* AppDelegate.swift in Sources */,
 				84D698002688F970005EC844 /* UIColor.swift in Sources */,
 				84A9E7D126891FB900F78A00 /* TitleLeftLabel.swift in Sources */,
+				843EC9C9268A06DC0038F346 /* Double.swift in Sources */,
 				84D697F42688F8F6005EC844 /* WeatherViewController.swift in Sources */,
 				84D698052688FA69005EC844 /* WeatherDetailViewController.swift in Sources */,
 				84A9E7DB2689250700F78A00 /* String.swift in Sources */,

@@ -58,7 +58,7 @@ class WeatherViewController: UIViewController {
         buttonSearch.isUserInteractionEnabled = false
         
         // On va chercher les datas
-        ModelWeather.fetchWheathers(city: textFieldCity.text!, days: 4) { (Weathers, error) in
+        ModelWeather.fetchWheathers(city: textFieldCity.text!, days: 7) { (Weathers, error) in
             // On reactive le bouton
             self.buttonSearch.isUserInteractionEnabled = true
             
