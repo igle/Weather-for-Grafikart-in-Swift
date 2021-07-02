@@ -24,7 +24,7 @@ class SimpleWeatherTableViewCell: UITableViewCell {
         didSet {
             labelDateText.text = convertTimeStamp(timeStamp: weatherList.dt, dateFormatter: "EEE").capitalizingFirstLetter().replacingOccurrences(of: ".", with: "")
             labelDate.text = convertTimeStamp(timeStamp: weatherList.dt, dateFormatter: "dd/MM")
-            labelTemperature.text = "\(weatherList.temp.day)°C"
+            labelTemperature.text = "\(Int(weatherList.temp.day.round(to: 0)))°C"
         }
     }
     
