@@ -20,9 +20,12 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         
         // Configuration du navigation controller
-        navigationController?.navigationBar.barTintColor = UIColor.colorPrimary()
+        navigationController?.navigationBar.barTintColor = UIColor(named: "ColorPrimary")
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.title = "Rechercher une ville"
+        
+        // Changement du background
+        view.backgroundColor = UIColor(named: "ColorSecondary")
 
         // Ajout des vues sur le ViewController
         view.addSubview(textFieldCity)

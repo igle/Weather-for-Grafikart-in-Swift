@@ -23,7 +23,6 @@
 		84A9E7D62689200D00F78A00 /* TitleRightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E7D52689200D00F78A00 /* TitleRightLabel.swift */; };
 		84A9E7DB2689250700F78A00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E7DA2689250700F78A00 /* String.swift */; };
 		84D697F42688F8F6005EC844 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D697F32688F8F6005EC844 /* WeatherViewController.swift */; };
-		84D698002688F970005EC844 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D697FF2688F970005EC844 /* UIColor.swift */; };
 		84D698052688FA69005EC844 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D698042688FA69005EC844 /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		84A9E7D52689200D00F78A00 /* TitleRightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleRightLabel.swift; sourceTree = "<group>"; };
 		84A9E7DA2689250700F78A00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		84D697F32688F8F6005EC844 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		84D697FF2688F970005EC844 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		84D698042688FA69005EC844 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,7 +221,6 @@
 		84D697FE2688F939005EC844 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				84D697FF2688F970005EC844 /* UIColor.swift */,
 				84A9E7DA2689250700F78A00 /* String.swift */,
 				843EC9C8268A06DC0038F346 /* Double.swift */,
 			);
@@ -362,7 +359,6 @@
 			files = (
 				8448B6652688FE35005FD03D /* SimpleTextField.swift in Sources */,
 				847134E92688F6DC00EF3506 /* AppDelegate.swift in Sources */,
-				84D698002688F970005EC844 /* UIColor.swift in Sources */,
 				84A9E7D126891FB900F78A00 /* TitleLeftLabel.swift in Sources */,
 				843EC9C9268A06DC0038F346 /* Double.swift in Sources */,
 				84D697F42688F8F6005EC844 /* WeatherViewController.swift in Sources */,

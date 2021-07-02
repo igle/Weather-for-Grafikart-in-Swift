@@ -23,7 +23,7 @@ class SearchButton: UIButton {
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
         titleLabel?.adjustsFontForContentSizeCategory = true
         tintColor = .white
-        backgroundColor = UIColor.colorPrimary()
+        backgroundColor = UIColor(named: "ColorPrimary")
         layer.cornerRadius = 10
         clipsToBounds = true
     }

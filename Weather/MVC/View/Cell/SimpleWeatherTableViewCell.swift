@@ -35,7 +35,7 @@ class SimpleWeatherTableViewCell: UITableViewCell {
         
         // Ajout des labels
         addSubview(labelDateText)
-        labelDate.textColor = UIColor.colorSecondary()
+        labelDate.textColor = UIColor(named: "ColorText")
         addSubview(labelDate)
         addSubview(labelTemperature)
         
@@ -43,6 +43,7 @@ class SimpleWeatherTableViewCell: UITableViewCell {
         // Change type cell
         accessoryType = .none
         selectionStyle = .none
+        backgroundColor = UIColor(named: "ColorSecondary")
         
         // Ajout une constraint
         NSLayoutConstraint.activate([

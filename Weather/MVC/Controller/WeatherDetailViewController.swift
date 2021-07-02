@@ -22,6 +22,8 @@ class WeatherDetailViewController: UIViewController {
         tv.estimatedRowHeight = UITableView.automaticDimension
         tv.rowHeight = UITableView.automaticDimension
         tv.layoutSubviews()
+        tv.backgroundColor = UIColor(named: "ColorSecondary")
+        tv.separatorColor = UIColor(named: "ColorSeparatorTableView")
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()
